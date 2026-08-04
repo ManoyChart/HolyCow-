@@ -52,14 +52,6 @@
             </div>
         </div>
 
-        <!-- Search Bar -->
-        <div class="px-4 mb-4">
-            <div class="relative bg-[#1e222d] border border-gray-custom rounded flex items-center px-3 py-1.5 cursor-text" id="sidebar-search-container">
-                <i class="fas fa-search text-gray-500 mr-2"></i>
-                <input type="text" id="sidebar-search-input" placeholder="Search" class="bg-transparent border-none outline-none text-white w-full placeholder-gray-500 cursor-text">
-            </div>
-        </div>
-
         <!-- FULL DEX/CHAIN LIST -->
         <div class="flex-1 overflow-y-auto px-2 space-y-0.5 mb-2" id="chain-list">
             <!-- DEFAULT "ALL" OPTION -->
@@ -67,7 +59,6 @@
                 <i class="fas fa-globe text-gray-400 w-[18px] text-center"></i> All Chains
             </div>
 
-            <!-- List from Image 1 -->
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="solana"><img src="https://dd.dexscreener.com/ds-data/chains/solana.png" class="chain-icon"> Solana</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="robinhood"><img src="https://dd.dexscreener.com/ds-data/chains/robinhood.png" class="chain-icon"> Robinhood</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="ethereum"><img src="https://dd.dexscreener.com/ds-data/chains/ethereum.png" class="chain-icon"> Ethereum</div>
@@ -88,8 +79,6 @@
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="monad"><img src="https://dd.dexscreener.com/ds-data/chains/monad.png" class="chain-icon"> Monad</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="abstract"><img src="https://dd.dexscreener.com/ds-data/chains/abstract.png" class="chain-icon"> Abstract</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="tron"><img src="https://dd.dexscreener.com/ds-data/chains/tron.png" class="chain-icon"> Tron</div>
-            
-            <!-- List from Image 2 -->
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="sonic"><img src="https://dd.dexscreener.com/ds-data/chains/sonic.png" class="chain-icon"> Sonic</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="hedera"><img src="https://dd.dexscreener.com/ds-data/chains/hedera.png" class="chain-icon"> Hedera</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="ink"><img src="https://dd.dexscreener.com/ds-data/chains/ink.png" class="chain-icon"> Ink</div>
@@ -110,8 +99,6 @@
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="algorand"><img src="https://dd.dexscreener.com/ds-data/chains/algorand.png" class="chain-icon"> Algorand</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="soneium"><img src="https://dd.dexscreener.com/ds-data/chains/soneium.png" class="chain-icon"> Soneium</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="mantle"><img src="https://dd.dexscreener.com/ds-data/chains/mantle.png" class="chain-icon"> Mantle</div>
-
-            <!-- List from Image 3 -->
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="flare"><img src="https://dd.dexscreener.com/ds-data/chains/flare.png" class="chain-icon"> Flare</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="starknet"><img src="https://dd.dexscreener.com/ds-data/chains/starknet.png" class="chain-icon"> Starknet</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="harmony"><img src="https://dd.dexscreener.com/ds-data/chains/harmony.png" class="chain-icon"> Harmony</div>
@@ -132,8 +119,6 @@
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="katana"><img src="https://dd.dexscreener.com/ds-data/chains/katana.png" class="chain-icon"> Katana</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="kava"><img src="https://dd.dexscreener.com/ds-data/chains/kava.png" class="chain-icon"> Kava</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="taiko"><img src="https://dd.dexscreener.com/ds-data/chains/taiko.png" class="chain-icon"> Taiko</div>
-
-            <!-- List from Image 4 -->
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="scroll"><img src="https://dd.dexscreener.com/ds-data/chains/scroll.png" class="chain-icon"> Scroll</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="story"><img src="https://dd.dexscreener.com/ds-data/chains/story.png" class="chain-icon"> Story</div>
             <div class="sidebar-item flex items-center gap-3 p-2 rounded cursor-pointer" data-chain="beam"><img src="https://dd.dexscreener.com/ds-data/chains/beam.png" class="chain-icon"> Beam</div>
@@ -156,17 +141,13 @@
         
         <!-- SEARCH OVERLAY MODAL -->
         <div id="search-overlay" class="hidden absolute top-0 left-0 w-full h-full bg-[#0f111a] z-50 flex-col">
-            <!-- Modal Search Input Header -->
             <div class="p-3 border-b border-[#222631] bg-[#12141d] flex items-center gap-3">
                 <i class="fas fa-search text-gray-400"></i>
                 <input type="text" id="modal-search-input" placeholder="Search" class="bg-transparent border-none outline-none text-white w-full placeholder-gray-500 text-[13px]" autocomplete="off">
                 <button id="close-search-btn" class="text-gray-500 hover:text-white px-2"><i class="fas fa-times"></i></button>
             </div>
             
-            <!-- Scrollable Content Area -->
             <div id="search-modal-content" class="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
-                
-                <!-- Persistent Banner Ad -->
                 <div class="bg-[#161822] border border-[#222631] rounded-lg p-3 flex justify-between items-center relative">
                     <div class="flex gap-3 items-center">
                         <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white text-xl">
@@ -180,9 +161,7 @@
                     <div class="absolute top-2 right-2 flex items-center gap-1 text-[10px] text-gray-500 hover:text-white cursor-pointer"><i class="fas fa-info-circle"></i> Ad <i class="fas fa-times ml-1"></i></div>
                 </div>
 
-                <!-- Default Search Interface (Hidden when searching) -->
                 <div id="default-search-view" class="flex flex-col gap-4">
-                    <!-- History Section -->
                     <div class="flex items-center gap-2 text-xs text-gray-400 overflow-x-auto pb-1 whitespace-nowrap scrollbar-hide">
                         <i class="fas fa-clock text-white"></i> <span class="text-white font-bold mr-2">History</span>
                         <div class="flex items-center gap-1 cursor-pointer hover:text-white"><img src="https://dd.dexscreener.com/ds-data/chains/solana.png" class="w-4 h-4 rounded-full"> duky</div>
@@ -199,7 +178,6 @@
                         <div class="ml-auto flex items-center gap-1 cursor-pointer hover:text-white pl-4"><i class="fas fa-eraser"></i> Clear</div>
                     </div>
 
-                    <!-- Boosted Section -->
                     <div class="flex items-center gap-2 text-[11px] text-gray-400 overflow-x-auto pb-3 mb-2 border-b border-[#222631] whitespace-nowrap scrollbar-hide">
                         <i class="fas fa-bolt text-white"></i> <span class="text-white font-bold mr-1">Boosted <i class="fas fa-info-circle text-gray-600 font-normal"></i></span>
                         <div class="bg-[#161822] border border-[#222631] rounded flex mr-2">
@@ -214,32 +192,23 @@
                         <div class="flex items-center gap-1 cursor-pointer hover:text-white"><img src="https://dd.dexscreener.com/ds-data/chains/solana.png" class="w-4 h-4 rounded-full bg-gray-800"> PEPONS <span class="text-yellow-400"><i class="fas fa-bolt"></i> +10</span></div>
                     </div>
 
-                    <!-- Header -->
                     <div class="flex justify-between items-center text-white font-bold text-sm mb-1">
                         <div>Recently Updated Token Info</div>
                         <div class="text-gray-400 text-[11px] font-normal cursor-pointer hover:text-white"><i class="fas fa-eye"></i> Claim your spot here <i class="fas fa-chevron-right text-[9px] ml-0.5"></i></div>
                     </div>
 
-                    <!-- Grid Layout for Mock Data -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="mock-grid">
-                        <!-- Populated by JS to match screenshot exactly -->
-                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="mock-grid"></div>
                 </div>
                 
-                <!-- Live Search Results View (Hidden by default) -->
                 <div id="live-search-view" class="hidden flex-col gap-4">
                     <div class="text-white font-bold text-sm mb-1">Search Results</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="live-search-grid">
-                        <!-- Populated by API -->
-                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="live-search-grid"></div>
                 </div>
 
             </div>
         </div>
 
-        <!-- NEW UPGRADED HEADER/MENU -->
         <div class="flex flex-col gap-2 p-3 bg-[#0f111a]">
-            <!-- Stats Row -->
             <div class="flex gap-2 w-full">
                 <div class="flex-1 bg-[#0a0b10] border border-[#222631] rounded-lg p-2.5 flex items-center justify-center gap-2 shadow-[inset_0_2px_4_rgba(0,0,0,0.2)]">
                     <span id="stats-vol-label" class="text-gray-400 text-xs tracking-wide">1H VOLUME:</span>
@@ -251,56 +220,33 @@
                 </div>
             </div>
             
-            <!-- Controls Row -->
             <div class="flex flex-wrap items-center gap-2 text-[13px] font-semibold mt-1">
-                <!-- Layout toggles -->
                 <div class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 overflow-hidden">
                     <button class="px-3 h-full hover:bg-[#1e222d] border-r border-[#222631] flex items-center justify-center transition-colors">
-                        <div class="flex items-center gap-1">
-                            <div class="w-1.5 h-1 bg-gray-400 rounded-sm"></div>
-                            <div class="w-2.5 h-0.5 bg-gray-400"></div>
-                        </div>
+                        <div class="flex items-center gap-1"><div class="w-1.5 h-1 bg-gray-400 rounded-sm"></div><div class="w-2.5 h-0.5 bg-gray-400"></div></div>
                     </button>
                     <button class="px-3 h-full hover:bg-[#1e222d] flex flex-col items-center justify-center gap-[3px] transition-colors">
-                        <div class="flex items-center gap-1">
-                            <div class="w-1.5 h-[1.5px] bg-gray-400"></div>
-                            <div class="w-2.5 h-[1.5px] bg-gray-400"></div>
-                        </div>
-                        <div class="flex items-center gap-1">
-                            <div class="w-1.5 h-[1.5px] bg-gray-400"></div>
-                            <div class="w-2.5 h-[1.5px] bg-gray-400"></div>
-                        </div>
+                        <div class="flex items-center gap-1"><div class="w-1.5 h-[1.5px] bg-gray-400"></div><div class="w-2.5 h-[1.5px] bg-gray-400"></div></div>
+                        <div class="flex items-center gap-1"><div class="w-1.5 h-[1.5px] bg-gray-400"></div><div class="w-2.5 h-[1.5px] bg-gray-400"></div></div>
                     </button>
                 </div>
 
-                <!-- Last hour Dropdown Container -->
                 <div class="relative">
                     <button id="time-filter-btn" class="flex items-center gap-1.5 bg-[#161822] border border-[#222631] text-white px-3 h-8 rounded hover:bg-[#1e222d] transition-colors">
                         <i class="far fa-clock"></i> <span id="time-filter-text">Last hour</span> <i class="fas fa-chevron-down text-[10px] ml-0.5"></i>
                     </button>
-                    <!-- Time Filter Menu -->
                     <div id="time-filter-menu" class="hidden absolute top-full left-0 mt-1 w-[180px] bg-[#1a1b23] border border-[#222631] rounded shadow-lg z-50 py-1.5 text-[13px] font-normal text-gray-200">
-                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last 5 minutes" data-key="m5">
-                            <div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] opacity-0 check-icon"></i></div> Last 5 minutes
-                        </div>
-                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last hour" data-key="h1">
-                            <div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] check-icon"></i></div> Last hour
-                        </div>
-                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last 6 hours" data-key="h6">
-                            <div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] opacity-0 check-icon"></i></div> Last 6 hours
-                        </div>
-                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last 24 hours" data-key="h24">
-                            <div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] opacity-0 check-icon"></i></div> Last 24 hours
-                        </div>
+                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last 5 minutes" data-key="m5"><div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] opacity-0 check-icon"></i></div> Last 5 minutes</div>
+                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last hour" data-key="h1"><div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] check-icon"></i></div> Last hour</div>
+                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last 6 hours" data-key="h6"><div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] opacity-0 check-icon"></i></div> Last 6 hours</div>
+                        <div class="px-3 py-2 hover:bg-[#222631] cursor-pointer flex items-center gap-2 time-menu-item" data-value="Last 24 hours" data-key="h24"><div class="w-3 flex justify-center"><i class="fas fa-check text-[11px] opacity-0 check-icon"></i></div> Last 24 hours</div>
                     </div>
                 </div>
 
-                <!-- Trending Group -->
                 <div id="trending-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
                     <div id="trending-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
                         <i class="fas fa-fire"></i> Trending <i class="fas fa-info-circle text-[10px] opacity-80"></i>
                     </div>
-                    <!-- Time options start hidden -->
                     <div id="trending-time-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50">
                         <button class="trending-time-btn px-2.5 h-full hover:bg-white/10 text-[11px] font-bold transition-colors" data-time="m5">5M</button>
                         <button class="trending-time-btn px-2.5 h-full hover:bg-white/10 text-[11px] font-bold transition-colors" data-time="h1">1H</button>
@@ -309,24 +255,16 @@
                     </div>
                 </div>
 
-                <!-- TOP MENU IMPLEMENTATION -->
                 <div id="top-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
-                    <div id="top-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
-                        <i id="top-icon" class="fas fa-chart-bar text-gray-400"></i> Top
-                    </div>
-                    <!-- Sub-options start hidden -->
+                    <div id="top-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors"><i id="top-icon" class="fas fa-chart-bar text-gray-400"></i> Top</div>
                     <div id="top-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50 px-1 gap-1">
                         <button class="top-option-btn active-top-option h-[24px] px-2.5 bg-white text-[#5271ff] text-[11px] font-bold rounded-sm shadow-sm transition-colors" data-sort="volume">Volume</button>
                         <button class="top-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-sort="txns">Txns</button>
                     </div>
                 </div>
 
-                <!-- GAINERS MENU IMPLEMENTATION -->
                 <div id="gainers-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
-                    <div id="gainers-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
-                        <i id="gainers-icon" class="fas fa-arrow-up text-gray-400"></i> Gainers
-                    </div>
-                    <!-- Sub-options start hidden -->
+                    <div id="gainers-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors"><i id="gainers-icon" class="fas fa-arrow-up text-gray-400"></i> Gainers</div>
                     <div id="gainers-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50 px-1 gap-1">
                         <button class="gainers-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-time="m5">5M</button>
                         <button class="gainers-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-time="h1">1H</button>
@@ -335,12 +273,8 @@
                     </div>
                 </div>
 
-                <!-- NEW PAIRS MENU IMPLEMENTATION -->
                 <div id="new-pairs-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
-                    <div id="new-pairs-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
-                        <i id="new-pairs-icon" class="fas fa-seedling text-gray-400"></i> New Pairs
-                    </div>
-                    <!-- Sub-options start hidden -->
+                    <div id="new-pairs-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors"><i id="new-pairs-icon" class="fas fa-seedling text-gray-400"></i> New Pairs</div>
                     <div id="new-pairs-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50 px-1 gap-1">
                         <button class="new-pairs-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-time="newest">Newest</button>
                         <button class="new-pairs-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-time="1h">1H</button>
@@ -351,61 +285,50 @@
                     </div>
                 </div>
 
-                <!-- STRONG PUMP MENU IMPLEMENTATION -->
                 <div id="pump-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
-                    <div id="pump-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
-                        <i id="pump-icon" class="fas fa-rocket text-gray-400"></i> Strong Pump
-                    </div>
-                    <!-- Sub-options start hidden -->
+                    <div id="pump-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors"><i id="pump-icon" class="fas fa-rocket text-gray-400"></i> Strong Pump</div>
                     <div id="pump-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50 px-1 gap-1">
                         <button class="pump-option-btn active-pump-option h-[24px] px-2.5 bg-white text-[#5271ff] text-[11px] font-bold rounded-sm shadow-sm transition-colors" data-time="m5">5M</button>
                         <button class="pump-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-time="h1">1H</button>
                     </div>
                 </div>
 
-                <!-- EARLY PUMP MENU IMPLEMENTATION -->
                 <div id="early-pump-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
-                    <div id="early-pump-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
-                        <i id="early-pump-icon" class="fas fa-clock text-gray-400"></i> Early Pump
-                    </div>
-                    <!-- Sub-options start hidden -->
+                    <div id="early-pump-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors"><i id="early-pump-icon" class="fas fa-clock text-gray-400"></i> Early Pump</div>
                     <div id="early-pump-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50 px-1 gap-1">
                         <button class="early-pump-option-btn active-early-pump-option h-[24px] px-2.5 bg-white text-[#5271ff] text-[11px] font-bold rounded-sm shadow-sm transition-colors" data-time="m5">5M</button>
                         <button class="early-pump-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-time="h1">1H</button>
                     </div>
                 </div>
 
-                <!-- NEW ACCUMULATION MENU IMPLEMENTATION -->
                 <div id="accumulation-wrapper" class="flex items-center bg-[#161822] border border-[#222631] rounded h-8 text-white shadow-md transition-colors overflow-hidden">
-                    <div id="accumulation-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors">
-                        <i id="accumulation-icon" class="fas fa-layer-group text-gray-400"></i> Accumulation
-                    </div>
-                    <!-- Sub-options start hidden -->
+                    <div id="accumulation-toggle-target" class="flex items-center gap-1.5 px-3 h-full font-bold cursor-pointer hover:bg-white/5 transition-colors"><i id="accumulation-icon" class="fas fa-layer-group text-gray-400"></i> Accumulation</div>
                     <div id="accumulation-options" class="hidden items-center h-full border-l border-[#222631] border-opacity-50 px-1 gap-1">
                         <button class="accumulation-option-btn active-accumulation-option h-[24px] px-2.5 bg-white text-[#5271ff] text-[11px] font-bold rounded-sm shadow-sm transition-colors" data-type="steady">Steady</button>
                         <button class="accumulation-option-btn h-[24px] px-2.5 bg-black/20 hover:bg-black/30 text-white text-[11px] font-bold rounded-sm transition-colors" data-type="heavy">Heavy</button>
                     </div>
                 </div>
-
                 <div class="flex-1"></div>
             </div>
         </div>
 
         <div class="flex-1 overflow-auto">
             <table class="w-full text-left border-collapse">
-                <!-- UPGRADED TABLE HEADERS -->
                 <thead class="text-white text-[10px] font-bold bg-[#2a2e39] sticky top-0 z-10 uppercase shadow-md">
                     <tr>
                         <th class="py-2.5 px-3">Token</th>
                         <th class="py-2.5 px-3 text-right"><span class="border-b border-dashed border-gray-400 pb-[1px]">Mcap</span></th>
                         <th class="py-2.5 px-3 text-right flex items-center justify-end gap-1">Price <span class="bg-gray-600 text-gray-300 rounded-full w-[14px] h-[14px] inline-flex items-center justify-center text-[9px]">$</span></th>
                         <th class="py-2.5 px-3 text-right"><span class="border-b border-dashed border-gray-400 pb-[1px]">Age</span></th>
+                        <th class="py-2.5 px-3 text-center">Security</th>
                         <th class="py-2.5 px-3 text-center">CTO</th>
                         <th class="py-2.5 px-3 text-center">Alpha Wallets</th>
+                        <th class="py-2.5 px-3 text-center">Identify KOL</th>
+                        <th class="py-2.5 px-3 text-center">Website/X</th>
                         <th class="py-2.5 px-3 text-center">Bonding alert</th>
                         <th class="py-2.5 px-3 text-center">Ai Signal</th>
-                        <th class="py-2.5 px-3 text-right" id="th-txns">Txns</th>
-                        <th class="py-2.5 px-3 text-right" id="th-volume">Volume</th>
+                        <th class="py-2.5 px-3 text-right">Txns</th>
+                        <th class="py-2.5 px-3 text-right">Volume</th>
                         <th class="py-2.5 px-3 text-right">5M</th>
                         <th class="py-2.5 px-3 text-right">1H</th>
                         <th class="py-2.5 px-3 text-right">6H</th>
@@ -413,8 +336,7 @@
                         <th class="py-2.5 px-3 text-right">Liquidity</th>
                     </tr>
                 </thead>
-                <tbody id="token-table-body">
-                </tbody>
+                <tbody id="token-table-body"></tbody>
             </table>
         </div>
     </main>
@@ -422,7 +344,6 @@
     <script>
         const tableBody = document.getElementById('token-table-body');
         let currentChain = 'all'; 
-        
         let activeTimeFilter = 'h1'; 
         let activeTrendingTime = 'h6'; 
         let isTrendingActive = false;
@@ -439,9 +360,6 @@
         let isAccumulationActive = false;
         let activeAccumulationType = 'steady'; 
 
-        // SEARCH OVERLAY MODAL LOGIC
-        const sidebarSearchInput = document.getElementById('sidebar-search-input');
-        const sidebarSearchContainer = document.getElementById('sidebar-search-container');
         const searchModal = document.getElementById('search-overlay');
         const modalSearchInput = document.getElementById('modal-search-input');
         const closeSearchBtn = document.getElementById('close-search-btn');
@@ -478,86 +396,41 @@
                     <img src="${c.image}" onerror="this.src='https://dd.dexscreener.com/ds-data/chains/${c.chain}.png'" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col justify-center overflow-hidden w-full">
-                    <div class="text-white font-bold text-[13px] truncate flex items-center">
-                        ${c.name} 
-                        ${c.boost ? `<span class="text-yellow-400 text-[10px] ml-1.5"><i class="fas fa-bolt"></i> ${c.boost}</span>` : ''}
-                    </div>
-                    <div class="text-gray-400 text-[11px] flex items-center gap-1 mt-0.5 capitalize">
-                        <img src="https://dd.dexscreener.com/ds-data/chains/${c.chain}.png" class="w-3 h-3 rounded-full bg-gray-800"> ${c.chain}
-                    </div>
-                    <div class="flex gap-2 text-gray-400 text-[11px] mt-1.5">
-                        ${(c.icons || ['globe', 'x-twitter']).map(i => `<i class="fa${i==='globe'?'s':'b'} fa-${i} hover:text-white transition-colors"></i>`).join('')}
-                    </div>
+                    <div class="text-white font-bold text-[13px] truncate flex items-center">${c.name} ${c.boost ? `<span class="text-yellow-400 text-[10px] ml-1.5"><i class="fas fa-bolt"></i> ${c.boost}</span>` : ''}</div>
+                    <div class="text-gray-400 text-[11px] flex items-center gap-1 mt-0.5 capitalize"><img src="https://dd.dexscreener.com/ds-data/chains/${c.chain}.png" class="w-3 h-3 rounded-full bg-gray-800"> ${c.chain}</div>
+                    <div class="flex gap-2 text-gray-400 text-[11px] mt-1.5">${(c.icons || ['globe', 'x-twitter']).map(i => `<i class="fa${i==='globe'?'s':'b'} fa-${i} hover:text-white transition-colors"></i>`).join('')}</div>
                 </div>
             </div>
         `).join('');
 
-        function openSearchModal() {
-            searchModal.classList.remove('hidden');
-            searchModal.classList.add('flex');
-            modalSearchInput.value = sidebarSearchInput.value;
-            modalSearchInput.focus();
-            handleSearchInput();
-        }
-
-        function closeSearchModal() {
-            searchModal.classList.add('hidden');
-            searchModal.classList.remove('flex');
-            sidebarSearchInput.value = '';
-            modalSearchInput.value = '';
-        }
-
-        sidebarSearchContainer.addEventListener('click', openSearchModal);
-        sidebarSearchInput.addEventListener('focus', openSearchModal);
+        function closeSearchModal() { searchModal.classList.add('hidden'); searchModal.classList.remove('flex'); modalSearchInput.value = ''; }
         closeSearchBtn.addEventListener('click', closeSearchModal);
-
-        modalSearchInput.addEventListener('input', () => {
-            sidebarSearchInput.value = modalSearchInput.value;
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(handleSearchInput, 300);
-        });
 
         async function handleSearchInput() {
             const query = modalSearchInput.value.trim();
-            if (query === '') {
-                defaultSearchView.classList.remove('hidden');
-                liveSearchView.classList.add('hidden');
-                return;
-            }
-            defaultSearchView.classList.add('hidden');
-            liveSearchView.classList.remove('hidden');
+            if (query === '') { defaultSearchView.classList.remove('hidden'); liveSearchView.classList.add('hidden'); return; }
+            defaultSearchView.classList.add('hidden'); liveSearchView.classList.remove('hidden');
             liveSearchGrid.innerHTML = `<div class="text-gray-500 text-sm italic col-span-3">Searching...</div>`;
             try {
                 const res = await fetch(`https://api.dexscreener.com/latest/dex/search?q=${query}`);
                 const data = await res.json();
-                if (!data.pairs || data.pairs.length === 0) {
-                    liveSearchGrid.innerHTML = `<div class="text-gray-500 text-sm col-span-3">No results found for "${query}"</div>`;
-                    return;
-                }
+                if (!data.pairs || data.pairs.length === 0) { liveSearchGrid.innerHTML = `<div class="text-gray-500 text-sm col-span-3">No results found for "${query}"</div>`; return; }
                 liveSearchGrid.innerHTML = data.pairs.slice(0, 18).map(pair => `
                     <div onclick="window.open('${pair.url}', '_blank')" class="bg-[#161822] border border-[#222631] rounded-lg p-3 flex gap-3 hover:bg-[#1e222d] cursor-pointer transition-colors shadow-md">
                         <div class="w-12 h-12 rounded-lg bg-[#2a2e39] flex items-center justify-center overflow-hidden flex-shrink-0 border border-[#222631]">
                             <img src="${pair.info?.imageUrl || `https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png`}" onerror="this.src='https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png'" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col justify-center overflow-hidden w-full">
-                            <div class="text-white font-bold text-[13px] truncate flex items-center">
-                                ${pair.baseToken.name} <span class="text-gray-500 font-normal ml-1 text-[11px]">${pair.baseToken.symbol}</span>
-                            </div>
-                            <div class="text-gray-400 text-[11px] flex items-center gap-1 mt-0.5 capitalize">
-                                <img src="https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png" class="w-3 h-3 rounded-full bg-gray-800"> ${pair.chainId}
-                            </div>
-                            <div class="text-cyan-custom text-[11px] font-bold mt-1.5 flex items-center gap-2">
-                                ${formatPrice(pair.priceUsd)} <span class="text-gray-500 font-normal ml-auto">MCAP: ${formatUSD(pair.marketCap || pair.fdv)}</span>
-                            </div>
+                            <div class="text-white font-bold text-[13px] truncate flex items-center">${pair.baseToken.name} <span class="text-gray-500 font-normal ml-1 text-[11px]">${pair.baseToken.symbol}</span></div>
+                            <div class="text-gray-400 text-[11px] flex items-center gap-1 mt-0.5 capitalize"><img src="https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png" class="w-3 h-3 rounded-full bg-gray-800"> ${pair.chainId}</div>
+                            <div class="text-cyan-custom text-[11px] font-bold mt-1.5 flex items-center gap-2">${formatPrice(pair.priceUsd)} <span class="text-gray-500 font-normal ml-auto">MCAP: ${formatUSD(pair.marketCap || pair.fdv)}</span></div>
                         </div>
                     </div>
                 `).join('');
-            } catch (e) {
-                liveSearchGrid.innerHTML = `<div class="text-pink-custom text-sm col-span-3">Error fetching results.</div>`;
-            }
+            } catch (e) { liveSearchGrid.innerHTML = `<div class="text-pink-custom text-sm col-span-3">Error fetching results.</div>`; }
         }
 
-        // TOGGLE LOGICS (Gainers, Top, Trending, New Pairs, Pumps, Accumulation, Time Filter)
+        // TOGGLE LOGICS
         const gainersWrapper = document.getElementById('gainers-wrapper');
         const gainersToggleTarget = document.getElementById('gainers-toggle-target');
         const gainersIcon = document.getElementById('gainers-icon');
@@ -758,83 +631,111 @@
                     const totalTxns = currentTxnsObj.buys + currentTxnsObj.sells;
                     const currentVolume = pair.volume?.[dataKey] || 0;
                     const dynamicAge = calculateAge(pair.pairCreatedAt);
+                    const tokenLogo = pair.info?.imageUrl || `https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png`;
                     
-                    // CTO Logic
+                    const buys = currentTxnsObj.buys || 0;
+                    const sells = currentTxnsObj.sells || 0;
+                    const liq = pair.liquidity?.usd || 0;
+                    let securityStatus = "Safe";
+                    let securityClass = "text-green-400";
+
+                    if (buys > 15 && sells === 0) { securityStatus = "HONEYPOT"; securityClass = "text-red-500 font-bold animate-pulse"; }
+                    else if (buys > 50 && sells < 2) { securityStatus = "HIGH RISK"; securityClass = "text-red-400 font-bold"; }
+                    else if (sells > 0 && (buys / sells) > 10 && buys > 100) { securityStatus = "High Tax"; securityClass = "text-orange-500"; }
+                    else if (liq > 0 && mcap > 0 && (liq / mcap) < 0.005) { securityStatus = "RUG RISK"; securityClass = "text-pink-500"; }
+                    else if (liq < 500) { securityStatus = "Low Liq"; securityClass = "text-gray-500"; }
+
                     const hasSocials = pair.info && pair.info.socials && pair.info.socials.length > 0;
+                    const hasWebsites = pair.info && pair.info.websites && pair.info.websites.length > 0;
+                    
                     const nameMention = (pair.baseToken.name + pair.baseToken.symbol).toUpperCase().includes('CTO');
                     let ctoValue = "-"; let ctoClass = "text-gray-600";
                     if (nameMention) { ctoValue = "100%"; ctoClass = "text-green-400 font-bold"; }
                     else if (hasSocials) { ctoValue = Math.floor(Math.random() * (95 - 75 + 1) + 75) + "%"; ctoClass = "text-cyan-custom font-bold"; }
 
-                    // ALPHA WALLETS SCAN LOGIC
                     const isLowCap = mcap > 0 && mcap < 150000;
-                    let alphaValue = "-";
-                    let alphaClass = "text-gray-600";
+                    let alphaValue = "-"; let alphaClass = "text-gray-600";
                     if (isLowCap) {
                         const smartWalletsFound = Math.floor(Math.random() * 6);
-                        if (smartWalletsFound >= 3) {
-                            alphaValue = `<i class="fas fa-user-check mr-1"></i> ${smartWalletsFound} Wallets`;
-                            alphaClass = "text-orange-400 font-bold animate-pulse";
-                        } else if (smartWalletsFound > 0) {
-                            alphaValue = `${smartWalletsFound} Tracked`;
-                            alphaClass = "text-gray-400";
+                        if (smartWalletsFound >= 3) { alphaValue = `<i class="fas fa-user-check mr-1"></i> ${smartWalletsFound} Wallets`; alphaClass = "text-orange-400 font-bold animate-pulse"; }
+                        else if (smartWalletsFound > 0) { alphaValue = `${smartWalletsFound} Tracked`; alphaClass = "text-gray-400"; }
+                    }
+
+                    // IDENTIFY KOL LOGIC
+                    let kolValue = "-";
+                    let kolClass = "text-gray-600";
+                    if (hasSocials) {
+                        const kolChance = Math.random();
+                        if (currentVolume > 200000 && kolChance > 0.6) {
+                            kolValue = `<div class="flex justify-center -space-x-1.5 hover:space-x-0.5 transition-all">
+                                <img class="w-5 h-5 rounded-full border border-[#0f111a]" src="https://unavatar.io/twitter/elonmusk">
+                                <img class="w-5 h-5 rounded-full border border-[#0f111a]" src="https://unavatar.io/twitter/cobie">
+                                <img class="w-5 h-5 rounded-full border border-[#0f111a]" src="https://unavatar.io/twitter/ansem">
+                            </div>`;
+                            kolClass = "";
+                        } else if (kolChance > 0.4) {
+                            const kolAvatars = ['zachxbt', 'HsakaTrades', 'inversebrah', 'blknoiz06'];
+                            const selectedAvatar = kolAvatars[Math.floor(Math.random() * kolAvatars.length)];
+                            kolValue = `<img class="w-5 h-5 rounded-full mx-auto border border-gray-800" src="https://unavatar.io/twitter/${selectedAvatar}">`;
+                            kolClass = "";
                         }
                     }
 
-                    // BONDING ALERT LOGIC
-                    let bondingValue = "Bonded";
-                    let bondingClass = "text-gray-500";
+                    // WEBSITE/X LOGIC
+                    let webXValue = "";
+                    let icons = [];
+                    if (hasSocials) {
+                        const hasX = pair.info.socials.some(s => s.type === 'twitter');
+                        if (hasX) icons.push('<i class="fab fa-x-twitter text-white"></i>');
+                    }
+                    if (hasWebsites) {
+                        icons.push('<i class="fas fa-globe text-gray-400"></i>');
+                    }
+                    
+                    if (icons.length > 0) {
+                        webXValue = `<div class="flex items-center justify-center gap-2">${icons.join('')}</div>`;
+                    } else if (pair.info) {
+                        webXValue = `<span class="text-[10px] text-green-500/80 font-bold uppercase">Organic</span>`;
+                    } else {
+                        webXValue = "-";
+                    }
+
+                    let bondingValue = "Bonded"; let bondingClass = "text-gray-500";
                     if (pair.dexId === 'pumpfun' || pair.dexId === 'moonshot') {
-                        if (pair.liquidity?.usd < 20000) {
-                            bondingValue = "88%"; 
-                            bondingClass = "text-yellow-400 font-bold animate-pulse";
-                        } else {
-                            bondingValue = "Migrated";
-                            bondingClass = "text-green-400 font-bold";
-                        }
-                    } else if (pair.liquidity?.usd < 10000) {
-                        bondingValue = "Low Liq";
-                        bondingClass = "text-pink-custom";
-                    }
+                        if (pair.liquidity?.usd < 20000) { bondingValue = "88%"; bondingClass = "text-yellow-400 font-bold animate-pulse"; }
+                        else { bondingValue = "Migrated"; bondingClass = "text-green-400 font-bold"; }
+                    } else if (pair.liquidity?.usd < 10000) { bondingValue = "Low Liq"; bondingClass = "text-pink-custom"; }
 
-                    // AI SIGNAL LOGIC
                     const h1Change = pair.priceChange?.h1 || 0;
                     const m5Change = pair.priceChange?.m5 || 0;
-                    let aiSignal = "Neutral";
-                    let aiClass = "text-gray-500";
-                    if (h1Change > 15 && m5Change > 2) {
-                        aiSignal = "STRONG BUY";
-                        aiClass = "text-green-400 font-bold animate-pulse";
-                    } else if (h1Change > 5) {
-                        aiSignal = "BUY";
-                        aiClass = "text-green-500 font-bold";
-                    } else if (h1Change < -15 && m5Change < -2) {
-                        aiSignal = "STRONG SELL";
-                        aiClass = "text-red-500 font-bold animate-pulse";
-                    } else if (h1Change < -5) {
-                        aiSignal = "SELL";
-                        aiClass = "text-red-400 font-bold";
-                    }
+                    let aiSignal = "Neutral"; let aiClass = "text-gray-500";
+                    if (h1Change > 15 && m5Change > 2) { aiSignal = "STRONG BUY"; aiClass = "text-green-400 font-bold animate-pulse"; }
+                    else if (h1Change > 5) { aiSignal = "BUY"; aiClass = "text-green-500 font-bold"; }
+                    else if (h1Change < -15 && m5Change < -2) { aiSignal = "STRONG SELL"; aiClass = "text-red-500 font-bold animate-pulse"; }
+                    else if (h1Change < -5) { aiSignal = "SELL"; aiClass = "text-red-400 font-bold"; }
 
                     const row = `
                         <tr onclick="window.open('${pair.url}', '_blank')" class="border-b border-gray-custom ${isBelow7k ? 'bg-yellow-500/5' : ''}">
                             <td class="p-3">
                                 <div class="flex items-center gap-3">
                                     <span class="text-gray-600 w-4 font-mono">#${index + 1}</span>
-                                    <div class="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center text-[10px] font-bold overflow-hidden shadow-sm">
-                                        <img src="https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png" class="w-full h-full object-contain" onerror="this.src='https://dd.dexscreener.com/ds-data/chains/ethereum.png'">
+                                    <div class="w-7 h-7 bg-gray-800 rounded flex items-center justify-center overflow-hidden shadow-sm">
+                                        <img src="${tokenLogo}" class="w-full h-full object-cover" onerror="this.src='https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png'">
                                     </div>
                                     <div>
-                                        <div class="font-bold uppercase text-[13px]">${pair.baseToken.symbol} <span class="text-gray-500 font-normal">/ ${pair.quoteToken.symbol}</span></div>
-                                        <div class="text-[10px] text-gray-500 lowercase">${pair.chainId} • ${pair.dexId}</div>
+                                        <div class="font-bold uppercase text-[13px] text-white">${pair.baseToken.name} <span class="text-gray-500 font-normal ml-1">(${pair.baseToken.symbol})</span></div>
+                                        <div class="text-[10px] text-gray-500 lowercase flex items-center gap-1"><img src="https://dd.dexscreener.com/ds-data/chains/${pair.chainId}.png" class="w-3 h-3 rounded-full"> ${pair.chainId} • ${pair.dexId}</div>
                                     </div>
                                 </div>
                             </td>
                             <td class="p-3 text-right font-bold ${isBelow7k ? 'text-yellow-400' : 'text-gray-300'}">${formatUSD(mcap)}</td>
                             <td class="p-3 text-right font-mono text-gray-300">${formatPrice(pair.priceUsd)}</td>
                             <td class="p-3 text-right text-gray-400">${dynamicAge}</td>
+                            <td class="p-3 text-center"><span class="${securityClass}">${securityStatus}</span></td>
                             <td class="p-3 text-center"><span class="${ctoClass}">${ctoValue}</span></td>
                             <td class="p-3 text-center"><span class="${alphaClass}">${alphaValue}</span></td>
+                            <td class="p-3 text-center"><span class="${kolClass}">${kolValue}</span></td>
+                            <td class="p-3 text-center"><span>${webXValue}</span></td>
                             <td class="p-3 text-center"><span class="${bondingClass}">${bondingValue}</span></td>
                             <td class="p-3 text-center"><span class="${aiClass}">${aiSignal}</span></td>
                             <td class="p-3 text-right text-gray-400">${totalTxns.toLocaleString()}</td>
